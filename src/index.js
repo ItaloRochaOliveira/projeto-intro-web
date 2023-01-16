@@ -76,29 +76,6 @@ function createBlock(cardapio) {
     let block = document.createElement("article");
     block.setAttribute("class", "block");
 
-    // for (let i in comida) {
-    //   let paragraph = document.createElement("paragraph");
-    //   paragraph.setAttribute("class", "conteudo");
-    //   if (i == "nome") {
-    //     paragraph.innerHTML = `${comida[i][0].toUpperCase()}${comida[
-    //       i
-    //     ].substring(1)}`;
-    //     block.appendChild(paragraph);
-    //   } else if (i === "preço") {
-    //     paragraph.innerHTML = `R$${comida[i]}`;
-    //     block.appendChild(paragraph);
-    //   } else if (i === "img") {
-    //     let img = document.createElement("img");
-    //     img.setAttribute("src", comida[i]);
-    //     paragraph.appendChild(img);
-    //     block.appendChild(paragraph);
-    //   } else if (i === "sabores") {
-    //   } else {
-    //     paragraph.innerHTML = `${i}: ${comida[i]}`;
-    //     block.appendChild(paragraph);
-    //   }
-    // }
-
     block.insertAdjacentHTML(
       "beforeend",
       `

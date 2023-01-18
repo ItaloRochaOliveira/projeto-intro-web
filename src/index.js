@@ -60,8 +60,10 @@ const itsTrue = () => {
   }
   if (itsFalse > itsTrue) {
     console.log("Nem todas as comidas são vegetariana");
-  } else {
-    console.log("Todas as comidas são vegetariana");
+  } else if(itsFalse === itsTrue){
+    console.log("A quantidade de comida vegetariana e não são iguais.")
+  }else{
+    console.log("A maioria das comidas são vegetariana");
   }
 };
 
@@ -96,9 +98,6 @@ function createBlock(cardapio) {
         comida.vegetariano === true ? "sim" : "não"
       }</p>
       </div>
-    
-    
-
     `
     );
     main.appendChild(block);
@@ -111,8 +110,13 @@ createBlock(cardapio);
 //pesquisa
 
 let search = document.querySelector("#pesquisa");
+let closeSearch = document.getElementById("x-inside-input");
 
 search.addEventListener("input", returnSearch);
+closeSearch.addEventListener("click", ()=>{
+  search.value = ""
+  createBlock(cardapio)
+})
 
 function returnSearch(e) {
   let letra = e.target.value;

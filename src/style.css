@@ -1,6 +1,4 @@
 * {
-  width: 0 auto;
-  height: 0 auto;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -12,7 +10,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  min-width: 100vw;
+  max-width: 100vw;
 }
 a {
   text-decoration: none;
@@ -39,25 +37,31 @@ header img {
 header nav {
   margin: auto;
   margin-right: 0;
+
+  position: relative;
 }
 #pesquisa {
-  position: relative;
   width: 36.6vw;
-  min-height: 4vh;
+  min-height: 25px;
 
   border-radius: 5px;
   border: none;
 
   text-align: center;
 
-  background-image: url(/img/lupa.svg);
-  background-repeat: no-repeat;
-  background-size: 17px;
-  background-position: left;
 }
-
-#catalogo {
-  flex-grow: 1;
+#maginifier{
+  position: absolute;
+  color: #762e2e;
+}
+#x-inside-input{
+  color: #762e2e;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#x-inside-input:hover{
+  cursor: pointer;
 }
 .blur {
   backdrop-filter: blur(10px);
@@ -70,6 +74,7 @@ header nav {
   column-gap: 2%;
 
   width: 90%;
+  min-height: 60vh;
   margin: auto;
 }
 .block {
@@ -116,29 +121,27 @@ header nav {
 
   background: #762e2e;
   color: white;
-}
-#adicionar {
+
   cursor: pointer;
+}
+#adicionar span:nth-child(1){
+  font-size: 20px;
+  margin-left: 25px;
 }
 .material-symbols-rounded {
   color: #762e2e;
   background-color: white;
 
-  margin-left: 5px;
+  margin-left: 10px;
 
   border-radius: 100%;
 }
-#adicionar input:hover {
-  cursor: pointer;
-}
-
 #new-for-form {
   display: flex;
 
   position: fixed;
   top: 50%;
   left: 50%;
-  animation: new-form;
   z-index: 3;
   transform: translate(-50%, -50%);
 

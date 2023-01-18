@@ -121,7 +121,7 @@ closeSearch.addEventListener("click", ()=>{
 function returnSearch(e) {
   let letra = e.target.value;
   const nomeDaComida = cardapio.filter((cardapioObj) => {
-    return cardapioObj.nome.includes(letra);
+    return cardapioObj.nome.includes(letra.toLowerCase());
   });
   createBlock(nomeDaComida);
 }
